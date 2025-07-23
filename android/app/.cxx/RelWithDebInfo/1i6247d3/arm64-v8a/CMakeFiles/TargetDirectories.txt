@@ -1,0 +1,2 @@
+/Users/brian/Music/Music/Media.localized/chat/new/today_weight/android/app/.cxx/RelWithDebInfo/1i6247d3/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/brian/Music/Music/Media.localized/chat/new/today_weight/android/app/.cxx/RelWithDebInfo/1i6247d3/arm64-v8a/CMakeFiles/rebuild_cache.dir

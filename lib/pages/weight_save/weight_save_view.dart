@@ -11,13 +11,14 @@ class WeightSaveView extends GetView<WeightSaveLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.daugherty.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.bogisich.value
+              ? const CircularProgressIndicator(color: Colors.green)
               : buildError(),
         ),
       ),
     );
   }
+
 
   Widget buildError() {
     return Center(
@@ -26,7 +27,7 @@ class WeightSaveView extends GetView<WeightSaveLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.sknjfqlm();
+              controller.azkbmhc();
             },
             icon: const Icon(
               Icons.restart_alt,

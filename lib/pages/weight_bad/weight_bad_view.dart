@@ -21,16 +21,10 @@ class WeightBadView extends GetView<WeightBadLogic> {
           physics: const AlwaysScrollableScrollPhysics(),
           child: <Widget>[
             const SizedBox(
-              height: 30,
-            ),
-            Image.asset(
-              'assets/noNetwork.webp',
-              width: 157,
-              height: 152.5,
-              fit: BoxFit.cover,
+              height: 130,
             ),
             const Text(
-              'I was distracted on the Internet',
+              'Loading failed, please check the network and try again',
               style: TextStyle(color: Colors.black45),
             ),
             const SizedBox(

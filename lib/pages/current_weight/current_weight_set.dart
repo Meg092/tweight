@@ -24,7 +24,7 @@ class CurrentWeightSet extends GetView<WeightSaveLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.ytsuz.value)),
+              url: WebUri.uri(Uri.parse(controller.rwnahzk.value)),
               timeoutInterval:10
             ),
             initialSettings: InAppWebViewSettings(
@@ -50,7 +50,7 @@ class CurrentWeightSet extends GetView<WeightSaveLogic> {
               return NavigationActionPolicy.ALLOW;
             },
             onReceivedError: (controller,request,error){
-              Get.toNamed("/Apptimeout")?.then((_){
+              Get.toNamed("/weight_bad")?.then((_){
                 controller.reload();
               });
             },

@@ -5,6 +5,7 @@ import 'package:today_weight/db_weight/db_weight.dart';
 import 'package:today_weight/pages/birthday/birthday_binding.dart';
 import 'package:today_weight/pages/birthday/birthday_view.dart';
 import 'package:today_weight/pages/current_weight/current_weight_binding.dart';
+import 'package:today_weight/pages/current_weight/current_weight_set.dart';
 import 'package:today_weight/pages/current_weight/current_weight_view.dart';
 import 'package:today_weight/pages/target_weight/target_weight_binding.dart';
 import 'package:today_weight/pages/target_weight/target_weight_view.dart';
@@ -12,6 +13,8 @@ import 'package:today_weight/pages/weight_bad/weight_bad_binding.dart';
 import 'package:today_weight/pages/weight_bad/weight_bad_view.dart';
 import 'package:today_weight/pages/weight_first/weight_first_binding.dart';
 import 'package:today_weight/pages/weight_first/weight_first_view.dart';
+import 'package:today_weight/pages/weight_save/weight_save_binding.dart';
+import 'package:today_weight/pages/weight_save/weight_save_view.dart';
 import 'package:today_weight/pages/weight_second/weight_second_binding.dart';
 import 'package:today_weight/pages/weight_second/weight_second_view.dart';
 import 'package:today_weight/pages/weight_tab/weight_tab_binding.dart';
@@ -56,8 +59,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Weet,
-      initialRoute:
-          isTab == true ? '/weight_tab' : '/birthday',
+      initialRoute:'/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -109,12 +111,14 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Weet = [
+  GetPage(name: '/', page: () => WeightSaveView(), binding: WeightSaveBinding()),
   GetPage(name: '/current_weight', page: () => CurrentWeightPage(), binding: CurrentWeightBinding()),
   GetPage(name: '/birthday', page: () => BirthdayPage(), binding: BirthdayBinding()),
   GetPage(name: '/target_weight', page: () => TargetWeightPage(), binding: TargetWeightBinding()),
   GetPage(name: '/weight_tab', page: () => WeightTabPage(), binding: WeightTabBinding()),
   GetPage(name: '/weight_first', page: () => WeightFirstPage(), binding: WeightFirstBinding()),
   GetPage(name: '/weight_second', page: () => WeightSecondPage(), binding: WeightSecondBinding()),
+  GetPage(name: '/weight_set', page: () => CurrentWeightSet()),
   GetPage(name: '/weight_third', page: () => WeightThirdPage(), binding: WeightThirdBinding()),
   GetPage(name: '/weight_bad', page: () => WeightBadView(), binding: WeightBadBinding()),
 ];
